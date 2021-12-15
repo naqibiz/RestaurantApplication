@@ -37,6 +37,16 @@ const ResultsShowScreen = ({navigation, route}) => {
         }}>
         {result.name}
       </Text>
+      <Text
+        style={{
+          fontSize: 15,
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          paddingHorizontal: 5,
+        }}>
+        Country {''}({result.location.country}) State ({result.location.state})
+        Address {''}({result.location.address1})
+      </Text>
       {/* <Text>Rating {result.rating}</Text> */}
       <FlatList
         data={result.photos}
